@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ziauddin Hospital</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="splash" role="status" aria-label="Loading Ziauddin Hospital">
+<div>
+<img class="splash-logo" src="./ziuddin logo.webp" alt="Ziauddin logo">
+<div class="nm">Ziauddin Hospital</div>
+<div class="sub">Karachi</div>
+<div class="bar"><i></i></div>
+</div></div>
+
+<div id="intro" role="dialog" aria-label="Welcome">
+<div class="pop hp">
+<button class="x" id="xbtn" type="button" aria-label="Close">&times;</button>
+<div class="hp-head"><img class="hp-logo" src="./ziuddin logo.webp" alt="Ziauddin logo"><div class="hp-name">Ziauddin Hospital<small>Karachi</small></div><div class="hp-ban"><b>Appointments open</b><span>Consultants across all major departments</span></div></div>
+<div class="hp-cols">
+<div><h4>Departments</h4><ul><li>Cardiology</li><li>Pediatrics</li><li>Gynecology</li><li>Orthopedics</li><li>Dentistry</li><li>Medicine</li><li>Radiology</li><li>Emergency</li></ul></div>
+<div><h4>Our campuses</h4><p><b>Clifton</b><br>Shahrah-e-Ghalib, Block 6</p><p><b>Kemari</b><br>Behind KPT Hospital</p><p><b>North Nazimabad</b><br>Allama Rasheed Turabi Rd</p><p><b>Cancer Hospital</b><br>Block B</p></div>
+<div><h4>Emergency, 24 hours</h4><div class="hp-num">021-35862937</div><p>Pick a doctor and request your appointment online.</p><button class="btn" id="popbook" type="button">Book appointment</button></div>
+</div></div>
+<button class="btn" id="enter" type="button">Enter website</button>
+</div>
+
+<div class="top"><div class="wrap"><span>Emergency 24/7: 021-35862937</span><span>Ziauddin site</span></div></div>
+<header><div class="wrap"><nav>
+<a class="logo" href="#home" style="display:flex;align-items:center;gap:10px"><img src="logo.png" alt="" style="height:34px;width:auto">Ziauddin <span>Hospital</span></a>
+<button class="menu" id="menu" aria-expanded="false">Menu</button>
+<div class="links" id="links">
+<a href="#departments">Departments</a><a href="#doctors">Doctors</a><a href="#book">Book appointment</a><a href="#contact">Contact</a>
+<a class="btn" href="#book">Book now</a></div>
+</nav></div></header>
+
+<main id="home">
+<div class="hero"><div class="wrap">
+<div>
+<h1>Ziauddin Hospital: care you can trust in Karachi.</h1>
+<p>Three campuses in Clifton, Kemari and North Nazimabad, with consultants, diagnostics and 24-hour emergency care. Pick a doctor and request an appointment online.</p>
+<div class="acts"><a class="btn" href="#book">Book an appointment</a><a class="btn alt" href="#doctors">Find a doctor</a></div>
+</div>
+<aside class="er">
+<h3>Emergency, 24 hours</h3><div class="num">021-35862937</div>
+<ul><li><span>Clifton</span><span>Block 6</span></li><li><span>Kemari</span><span>Behind KPT</span></li><li><span>North Nazimabad</span><span>Block B</span></li><li><span>Cancer Hospital</span><span>Block B</span></li></ul>
+</aside></div></div>
+
+<section id="departments"><div class="wrap">
+<h2>Departments</h2>
+<div class="grid" id="deptGrid"></div>
+</div></section>
+
+<section id="doctors" class="band"><div class="wrap">
+<h2>Our doctors</h2>
+<div class="tools"><input id="q" type="search" placeholder="Search by doctor name" aria-label="Search doctors"><div id="chips" class="tools" style="margin:0"></div></div>
+<div class="grid" id="docGrid"></div>
+<p id="none" class="err" style="display:none">No doctors match. Try another name or department.</p>
+</div></section>
+
+<section id="book"><div class="wrap" style="max-width:760px">
+<h2>Book an appointment</h2>
+<form id="form" novalidate>
+<div><label for="name">Full name</label><input id="name" required><div class="err"></div></div>
+<div><label for="phone">Mobile number</label><input id="phone" type="tel" placeholder="03XX-XXXXXXX" required><div class="err"></div></div>
+<div><label for="dept">Department</label><select id="dept" required></select><div class="err"></div></div>
+<div><label for="doc">Doctor</label><select id="doc"></select><div class="err"></div></div>
+<div><label for="date">Preferred date</label><input id="date" type="date" required><div class="err"></div></div>
+<div><label for="time">Time</label><select id="time"><option>Morning (9 am – 1 pm)</option><option>Afternoon (1 pm – 5 pm)</option><option>Evening (5 pm – 8 pm)</option></select><div class="err"></div></div>
+<div class="full"><label for="note">Reason for visit (optional)</label><textarea id="note" rows="3"></textarea></div>
+<div class="full"><button class="btn" type="submit">Confirm appointment</button></div>
+</form>
+<div class="ok" id="ok" role="status"></div>
+</div></section>
+
+<section id="contact" class="band"><div class="wrap split">
+<div>
+<h2>Visit or call us</h2>
+<p><b>Clifton campus</b><br>4/B Shahrah-e-Ghalib, Block 6, Clifton<br>021-35862937-9</p>
+<p><b>Kemari campus</b><br>Plot 33, behind KPT Hospital, Kemari<br>021-32851881</p>
+<p><b>North Nazimabad campus</b><br>Allama Rasheed Turabi Rd, Wahid Colony, Karachi 74700</p>
+<p>Please check the official Ziauddin website for current timings and numbers.</p>
+</div>
+<div>
+<img class="loc-img" src="north-nazimabad.jpg" alt="Dr. Ziauddin Hospital North Nazimabad Campus location, Allama Rasheed Turabi Rd, Wahid Colony, Karachi">
+<div class="tools" style="margin-top:4px">
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ziauddin+Hospital+North+Nazimabad+Karachi">Open in Google Maps</a>
+<a class="btn alt" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ziauddin+Hospital+Clifton+Campus+Karachi">Clifton map</a>
+<a class="btn alt" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ziauddin+Hospital+Kemari+Campus+Karachi">Kemari map</a>
+</div>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Ziauddin Hospital</span><button class="chip" id="theme" style="color:#fff;background:transparent;border-color:rgba(255,255,255,.5)">Toggle dark mode</button></div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
